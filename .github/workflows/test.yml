@@ -9,8 +9,8 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      # - name: Checkout repository
-      #   uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       # - name: npm install
       #   working-directory: ./frontend
@@ -35,5 +35,6 @@ jobs:
 
       - name: compose up
         run: |
-          docker compose up -d
+          docker compose down
+          docker compose up --build -d
 
