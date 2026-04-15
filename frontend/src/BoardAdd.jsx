@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from '../utils/network.js';
 import './App.css';
+import Header from './Header.jsx';
 
 const BoardAdd = () => {
     const nav = useNavigate();
@@ -25,24 +26,7 @@ const BoardAdd = () => {
     return (
         <div className="boardadd-container">
             <header className="boardadd-header">
-                <button
-                    type="button"
-                    className="boardadd-logo"
-                    onClick={nav.bind(null, "/")}
-                    disabled={isLoading}
-                    style={{
-                        background: 'none',
-                        border: 'none',
-                        padding: 0,
-                        cursor: isLoading ? 'not-allowed' : 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '10px'
-                    }}
-                >
-                    <span>🐾</span>
-                    <h1>가영 게시판</h1>
-                </button>
+                <Header isLoading={isLoading}/>
             </header>
 
             <div className="boardadd-card">

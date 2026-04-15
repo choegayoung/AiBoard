@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../utils/network.js';
-import './App.css'
+import './App.css' 
+import Header from './Header.jsx';
 
 const BoardView = () => {
     const nav = useNavigate();
@@ -73,24 +74,7 @@ const BoardView = () => {
     return ( 
         <div className="boardview-container">
             <header className="boardadd-header">
-                <button
-                    type="button"
-                    className="boardadd-logo"
-                    onClick={nav.bind(null, "/")}
-                    disabled={isLoading}
-                    style={{
-                        background: 'none',
-                        border: 'none',
-                        padding: 0,
-                        cursor: isLoading ? 'not-allowed' : 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '10px'
-                    }}
-                >
-                    <span>🐾</span>
-                    <h1>가영 게시판</h1>
-                </button>
+                <Header isLoading={isLoading}/>
             </header>
             <div className="boardview-post-card">
                 <h1 className="boardview-title">

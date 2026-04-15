@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import api from '../utils/network.js';
 import './App.css'
 
+
 const Home = () => {
     const nav = useNavigate();
     const [list, setList] = useState([])
@@ -19,7 +20,7 @@ const Home = () => {
         <div className="home-container">
             <header className="home-header">
                 <Link to="/" className="home-header-logo">
-                    <span>🐾</span>
+                    <span>🧸</span>
                     <h1>가영 게시판</h1>
                 </Link>
             </header>
