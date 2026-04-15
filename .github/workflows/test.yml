@@ -24,4 +24,6 @@ jobs:
         run: npm run build
 
       - name: nginx start
-        run: docker run -d -p 80:80 -v ./frontend/dist:/usr/share/nginx/html --name web nginx:1.28
+        run: |
+          docker rm -f web
+          docker run -d -p 80:80 -v ./frontend/dist:/usr/share/nginx/html --name web nginx:1.28
