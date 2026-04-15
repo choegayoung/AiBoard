@@ -96,7 +96,7 @@ const BoardView = () => {
                         </div>
                         <div className="boardview-prompt-container">
                             <label htmlFor="prompt" className="boardview-label">💡 AI에게 요청하기 (Prompt)</label>
-                            <textarea className="boardview-input boardview-prompt-textarea" id="prompt" placeholder="AI에게 요청할 내용을 입력하세요!" name="content" value={boardData.content} onChange={e => setBoardData({ ...boardData, content: e.target.value })} disabled={isLoading}></textarea>
+                            <textarea className="boardview-input boardview-prompt-textarea" id="prompt" placeholder="AI에게 요청할 내용을 입력하세요! ex) '작성자를 가영 으로 바꿔줘', '디즈니 공주에 대해' 등.." name="content" value={boardData.content} onChange={e => setBoardData({ ...boardData, content: e.target.value })} disabled={isLoading}></textarea>
                         </div>
                     </div>
                     <div className="boardview-button-group">

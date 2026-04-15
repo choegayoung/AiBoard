@@ -38,7 +38,7 @@ const BoardAdd = () => {
                             className="boardadd-textarea"
                             id="content"
                             name="content"
-                            placeholder="Prompt를 입력하세요!"
+                            placeholder="Prompt를 입력하세요! ex) '내 이름은 가영이 라고해. 당근파이를 만드는 방법을 써줘.'"
                             disabled={isLoading}
                             onChange={(e) => setBoardData({ ...boardData, content: e.target.value })}
                         ></textarea>
