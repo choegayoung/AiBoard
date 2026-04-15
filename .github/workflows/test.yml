@@ -32,7 +32,6 @@ jobs:
       # - name: fastapi run
       #   working-directory: ./backend
       #   run: docker run -d -p 8001:8000 -v .:/workspace --name back uv:1.1
-
       - name: compose up
         run: |
           docker compose down
