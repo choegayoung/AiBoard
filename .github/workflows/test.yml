@@ -13,5 +13,7 @@ jobs:
       #   run: $PSVersionTable
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Check Node.js version
-        run: node -v  
+      # - name: Check Node.js version
+      #   run: node -v 
+      - name: npm install
+        run: npm i
