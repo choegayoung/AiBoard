@@ -28,6 +28,7 @@ app.add_middleware(
 def save_board(name: str, title: str, content: str) -> bool:
     """
     정보를 받아 데이터베이스의 board 테이블에 저장하는 도구입니다.
+    절대 MarkUp 형태로 데이터를 저장하지 마세요. 태그는 제거된 순수 텍스트 형태로 받습니다.
     반드시 다음 형태를 가져야 합니다:
     {
       "name": "작성자 이름",
@@ -49,6 +50,7 @@ def save_board(name: str, title: str, content: str) -> bool:
 def update_board(no: int, name: str = "", title: str = "", content: str = "", mode: str = "update") -> bool:
     """
     게시글을 수정하거나 삭제합니다.
+    절대 MarkUp 형태로 데이터를 저장하지 마세요. 태그는 제거된 순수 텍스트 형태로 받습니다.
     
     [데이터 무결성 규칙 - 필독]
     1. 사용자가 직접 작성자를 '누구로 바꿔달라'고 지시한 항목이 아니면, 해당 인자값은 무조건 빈 문자열("")로 보냅니다.
